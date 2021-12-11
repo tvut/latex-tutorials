@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\usepackage{listings}
+\usepackage{color}
+
+\renewcommand\lstlistingname{Quelltext}
+
+\lstset{ % General setup for the package
+	language=Perl,
+	basicstyle=\small\sffamily,
+	numbers=left,
+ 	numberstyle=\tiny,
+	frame=tb,
+	tabsize=4,
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces,
+	commentstyle=\color{red},
+	keywordstyle=\color{blue}
+}
+
+\title{Tutorial 13 - Source Code}
+\date{2021-01-10}
+\author{Tristan Stevens}
+
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\noindent Writing the code in the document.
+\begin{lstlisting}
+#!/usr/bin/perl
+print S(@ARGV);sub S{$r=(@_[0]%4==0&&@_[0]%100!=0)||@_[0]%400=0;}
+\end{lstlisting}
+Importing a code file.
+\lstinputlisting{test.c}
+
+\end{document}

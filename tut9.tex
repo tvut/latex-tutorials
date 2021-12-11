@@ -1,0 +1,153 @@
+\documentclass{article}
+
+\title{Tutorial 9 - Tables}
+\date{2021-01-09}
+\author{Tristan Stevens}
+
+\usepackage{siunitx} %lets you align by decimal place
+\usepackage{multirow}
+\usepackage{booktabs} %adds pretty lines
+
+
+
+
+\sisetup{
+round-mode = places,
+round-precision = 2,
+}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\begin{table}[h!]
+\begin{center}
+\caption{A table.}
+\label{tab:table1}
+\begin{tabular}{l|c|r} %does column allignments
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+$\alpha$  & $\beta$ & $\gamma$ \\
+\hline
+1 & 111.01 & a\\
+1& 10.1 & b\\
+3 & 23.1123 & c\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{B table.}
+\label{tab:table2}
+\begin{tabular}{l|S|r} %does column allignments, S is with package that aligns at decimal
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+$\alpha$  & $\beta$ & $\gamma$ \\
+\hline
+1 & 111.01 & a\\
+1& 10.1 & b\\
+3 & 23.1123 & c\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{C table.}
+\label{tab:table3}
+\begin{tabular}{l|S|r}
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+$\alpha$  & $\beta$ & $\gamma$ \\
+\hline
+1 & 111.01 & a\\
+1& 10.1 & b\\
+3 & 23.1123 & c\\
+334 & 23.1123342 & d\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{D table.}
+\label{tab:table4}
+\begin{tabular}{l|S|c|r}
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}  & \textbf{Value 4}\\
+$\alpha$  & $\beta$ & $\gamma$ & $\theta$ \\
+\hline
+1 & 111.01 & a&hello\\
+1& 10.1 & b&this\\
+3 & 23.1123 & c&is\\
+334 & 23.1123342 & d&lasst\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{E table.}
+\label{tab:table5}
+\begin{tabular}{l|S|c|r}
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}  & \textbf{Value 4}\\
+$\alpha$  & $\beta$ & $\gamma$ & $\theta$ \\
+\hline
+\multirow{2}{*}{12} & 111.01 & a&hello\\
+& 2345.2 & b&lol\\
+\hline
+3 & 23.1123 & c&is\\
+334 & 23.1123342 & d&lasst\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{F table.}
+\label{tab:table6}
+\begin{tabular}{l|S|c|r}
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}  & \textbf{Value 4}\\
+$\alpha$  & $\beta$ & $\gamma$ & $\theta$ \\
+\hline
+\multicolumn{3}{c|}{12}& a\\
+\hline
+3 & 23.1123 & c&is\\
+334 & 23.1123342 & d&lasst\\
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{G table.}
+\label{tab:table7}
+\begin{tabular}{l|S|r}
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+$\alpha$ & $\beta$ & $\gamma$ \\
+\hline
+\multicolumn{2}{c|}{\multirow{2}{*}{1234}} & a\\ % <-- Multicolumn spanning 2 columns, content multirow spanning two rows
+\multicolumn{2}{c|}{} & b\\ % <-- Multicolumn spanning 2 columns with empty content as placeholder
+\hline
+3 & 23.113231 & c\\
+4 & 25.113231 & d\\
+    \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\caption{Using booktabs for prettier lines}
+\label{tab:table8}
+\begin{tabular}{l|S|r}
+\toprule
+\textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+$\alpha$  & $\beta$ & $\gamma$ \\
+\midrule
+1 & 111.01 & a\\
+1& 10.1 & b\\
+3 & 23.1123 & c\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{document}

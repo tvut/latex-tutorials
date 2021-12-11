@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\title{Tutorial 6 - Table of Contents}
+\date{2021-01-09}
+\author{Tristan Stevens}
+
+\usepackage{setspace}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+
+\maketitle
+%from package
+\doublespacing
+\tableofcontents
+\singlespacing
+\newpage
+
+\section{Section}
+Some text
+\subsection{Subsection}
+Some text
+\subsubsection{Sub sub section}
+Won't show up in TOC because of set counter flag.
+
+
+\begin{figure}
+\caption{Dummy figure}
+\end{figure}
+
+\begin{table}
+\caption{Dummy able}
+\end{table}
+
+\newpage
+
+\begin{appendix}
+\listoffigures
+\listoftables
+\end{appendix}
+
+
+
+
+\end{document}

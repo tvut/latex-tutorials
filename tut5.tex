@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+
+\title{Tutorial 5 - Pictures}
+\date{2021-01-09}
+\author{Tristan Stevens}
+
+\begin{document}
+\maketitle
+\newpage
+
+%float option at the end
+\begin{figure}[b!]
+\includegraphics[width=\linewidth]{test.jpg}
+\caption{Found this in my onedrive.}
+\label{fig:random1}
+\end{figure}
+
+Figure \ref{fig:random1} shows something random.
+
+\newpage
+
+Some random text that will go to the bottom because of positioning.
+
+\begin{figure}[t!]
+  \centering
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{test.jpg}
+     \caption{Coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{test.jpg}
+    \caption{More coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{test.jpg}
+    \caption{Tasty coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.5\linewidth}
+    \includegraphics[width=\linewidth]{test.jpg}
+    \caption{Too much coffee.}
+  \end{subfigure}
+  \caption{The same cup of coffee. Multiple times.}
+  \label{fig:coffee3}
+\end{figure}
+
+
+
+\end{document}

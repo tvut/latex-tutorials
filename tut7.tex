@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\title{Tutorial 7 - Bibliography with Footnotes}
+\date{2021-01-09}
+\author{Tristan Stevens}
+
+\usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
+\bibliography{test}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+Another citation \autocite[23]{DUMMY:1} but make it a footnote.
+Cite a book without a title \autocite{BOOK:2} like this.
+Cite an article \autocite{ARTICLE:1} like this.
+Cite pages of a book \autocite{BOOK:2} like this.
+Cite a website \autocite{WEBSITE:1} like this.
+
+\newpage
+
+\printbibliography
+
+\end{document}
